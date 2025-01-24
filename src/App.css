@@ -4,9 +4,68 @@
   box-sizing: border-box;
 }
 
-main{
+.main{
+  margin-top: 30px;
+  width: 600px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin-left: 35%;
+  position: relative;
+}
+.language-area{
+  padding: 10px;
+}
+.code-area{
+  padding:10px;
+  position: relative;
+}
+.code-area label{
+  position: absolute;
+  top: 40%;
+  left: -5%;
+}
+.input-area{
+  padding:10px;
+  position: relative;
+}
+textarea, input {
+  border: 2px solid #ccc;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+textarea:hover {
+  border-color: #888;
+}
+
+textarea:focus {
+  border-color: #88e90a;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+input:focus {
+  border-color: #88e90a;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+
+.input-area label {
+position:absolute;
+top: 25%;
+left: -5%;
+}
+.buttons-area{
+  padding:10px;
+  display:flex;
+}
+
+button {
+  padding: 10px;
+  margin-right:5px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.output-area{
+  padding:10px;
 }

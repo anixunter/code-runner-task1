@@ -1,5 +1,5 @@
 import { useState } from "react";
-import './App.css'
+import "./App.css"
 import useWebSocket from "./useWebSocket";
 
 const CodeRunner = () => {
@@ -63,7 +63,7 @@ const CodeRunner = () => {
   return (
     <div className="main">
       <h1>Code Runner</h1>
-      <div>
+      <div className="language-area">
         <label htmlFor="language">Language:</label>
         <select
           id="language"
@@ -75,18 +75,18 @@ const CodeRunner = () => {
         </select>
       </div>
 
-      <div>
+      <div className="code-area">
         <label htmlFor="code">Code:</label>
         <textarea
           id="code"
-          rows="10"
-          cols="30"
+          rows="7"
+          cols="40"
           value={code}
           onChange={(e) => setCode(e.target.value)}
         ></textarea>
       </div>
 
-      <div>
+      <div className="input-area">
         <label htmlFor="input">Input:</label>
         <input
           id="input"
@@ -95,7 +95,7 @@ const CodeRunner = () => {
         ></input>
       </div>
 
-      <div>
+      <div className="buttons-area">
         <button onClick={handleRunCode} disabled={isRunning}>
           Run Code
         </button>
@@ -107,7 +107,7 @@ const CodeRunner = () => {
         </button>
       </div>
 
-      <div>
+      <div className="output-area">
         <h2>Output:</h2>
         <pre>{output}</pre>
       </div>
